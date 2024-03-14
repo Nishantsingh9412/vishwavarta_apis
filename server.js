@@ -51,6 +51,9 @@ app.use('/api/messages', messageRoutes)
 
 // ----------------------------deployment--------------------------------------
 
+app.get('/', (req, res) => {
+    res.send("on 5000 port ")
+})
 
 
 
@@ -70,9 +73,6 @@ app.use(errorHandler)
 // })
 
 
-app.get('/', (req, res) => {
-    res.send("on 5000 port ")
-})
 
 const PORT = process.env.PORT || 5000
 const server = app.listen(PORT, console.log(`App started on Port : ${PORT}`))
